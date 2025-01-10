@@ -5,12 +5,13 @@ const app = express();
 const port = 3000;
 
 // MongoDB connection details
-const uri = "mongodb://127.0.0.1:27017"; 
+const uri2 = "mongodb://127.0.0.1:27017"; 
+const uri = "mongodb+srv://kalpankaneriya:kalpan_2007@codinggitaa.97mgu.mongodb.net/";
 const dbName = "codinggita-students";
 
 // Middleware
 app.use(express.json());
-
+    
 let db, students;
 
 // Connect to MongoDB and initialize collections
