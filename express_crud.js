@@ -4,6 +4,14 @@ const { MongoClient } = require('mongodb');
 const app = express();
 const port = 3000;
 
+const cors = require('cors');
+app.use(cors());
+const corsOptions = {
+    origin: '*', // Replace with your React app URL
+    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'], // Specify allowed HTTP methods
+    allowedHeaders: ['Content-Type', 'Authorization'], // Specify allowed headers
+  }
+
 // MongoDB connection details
 const uri2 = "mongodb://127.0.0.1:27017"; 
 const uri = "mongodb+srv://kalpankaneriya:kalpan_2007@codinggitaa.97mgu.mongodb.net/";
